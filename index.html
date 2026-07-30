@@ -90,7 +90,7 @@
   <header>
     <h1>Report MELI · Grupo Bamaq</h1>
     <div class="sub">Performance de mídia, funil de propostas e geração de leads — Consórcio</div>
-    <span class="pill">📅 Julho 2026 · dados até 24-jul</span>
+    <span class="pill">📅 Julho 2026 · dados até 30-jul</span>
     <div class="gen" id="genstamp"></div>
   </header>
 
@@ -110,21 +110,21 @@
   <div id="tab-funil" class="tabpane show">
     <h2 class="section">Funil de propostas</h2>
     <div class="kpis">
-      <div class="kpi"><div class="label">Propostas Geradas</div><div class="val">12</div><div class="fc">Forecast: <b>16</b></div></div>
-      <div class="kpi"><div class="label">Propostas Aceitas</div><div class="val">6</div><div class="fc">Forecast: <b>8</b> · taxa 50%</div></div>
+      <div class="kpi"><div class="label">Propostas Geradas</div><div class="val">13</div><div class="fc">Forecast: <b>14</b></div></div>
+      <div class="kpi"><div class="label">Propostas Aceitas</div><div class="val">7</div><div class="fc">Forecast: <b>7</b> · taxa 54%</div></div>
       <div class="kpi"><div class="label">Propostas Alocadas</div><div class="val">1</div><div class="fc">Forecast: <b>1</b></div></div>
-      <div class="kpi accent"><div class="label">Valor Produção</div><div class="val">R$ 8.240</div><div class="fc">Forecast: <b>R$ 11.106</b></div></div>
-      <div class="kpi"><div class="label">Faturamento 1ª parc.</div><div class="val">R$ 64,89</div><div class="fc">Forecast: <b>R$ 87,46</b></div></div>
-      <div class="kpi"><div class="label">ROAS</div><div class="val">0,28</div><div class="fc">CAC: R$ 29.442</div></div>
+      <div class="kpi accent"><div class="label">Valor Produção</div><div class="val">R$ 8.240</div><div class="fc">Forecast: <b>R$ 8.808</b></div></div>
+      <div class="kpi"><div class="label">Faturamento 1ª parc.</div><div class="val">R$ 64,89</div><div class="fc">Forecast: <b>R$ 69,37</b></div></div>
+      <div class="kpi"><div class="label">ROAS</div><div class="val">0,13</div><div class="fc">CAC: R$ 61.544</div></div>
     </div>
 
     <h2 class="section">Mídia paga</h2>
     <div class="kpis">
-      <div class="kpi"><div class="label">Impressões</div><div class="val">4,51 M</div><div class="fc">Forecast: <b>6,09 M</b></div></div>
-      <div class="kpi"><div class="label">Cliques</div><div class="val">11.408</div><div class="fc">Forecast: <b>15.376</b></div></div>
+      <div class="kpi"><div class="label">Impressões</div><div class="val">9,93 M</div><div class="fc">Forecast: <b>10,62 M</b></div></div>
+      <div class="kpi"><div class="label">Cliques</div><div class="val">25.112</div><div class="fc">Forecast: <b>26.844</b></div></div>
       <div class="kpi"><div class="label">CTR médio</div><div class="val">0,25%</div><div class="fc">cliques ÷ impressões</div></div>
-      <div class="kpi accent"><div class="label">Custo total</div><div class="val">R$ 29.442</div><div class="fc">Forecast: <b>R$ 39.683</b></div></div>
-      <div class="kpi"><div class="label">CPC médio</div><div class="val">R$ 2,58</div><div class="fc">custo ÷ cliques</div></div>
+      <div class="kpi accent"><div class="label">Custo total</div><div class="val">R$ 61.544</div><div class="fc">Forecast: <b>R$ 65.789</b></div></div>
+      <div class="kpi"><div class="label">CPC médio</div><div class="val">R$ 2,45</div><div class="fc">custo ÷ cliques</div></div>
     </div>
 
     <div class="grid g2" style="margin-top:18px">
@@ -171,8 +171,8 @@
   <div id="tab-leads" class="tabpane">
     <h2 class="section">Contatos & leads</h2>
     <div class="kpis">
-      <div class="kpi accent"><div class="label">Contatos (Loja Oficial)</div><div class="val">239</div><div class="fc">Forecast: <b>322</b></div></div>
-      <div class="kpi"><div class="label">Leads em julho</div><div class="val">273</div><div class="fc">base total: <b>421</b> (inclui jun/mai)</div></div>
+      <div class="kpi accent"><div class="label">Contatos (Loja Oficial)</div><div class="val">411</div><div class="fc">Forecast: <b>439</b></div></div>
+      <div class="kpi"><div class="label">Leads na base bruta</div><div class="val">273</div><div class="fc">base parada em 24-jul ⚠️</div></div>
       <div class="kpi"><div class="label">Via WhatsApp</div><div class="val">417</div><div class="fc">99% da base</div></div>
       <div class="kpi"><div class="label">Ligações</div><div class="val">3</div><div class="fc">+ 1 via Pergunta</div></div>
       <div class="kpi"><div class="label">Sessões no bot (BOTTT)</div><div class="val">4.720</div><div class="fc">volume de atendimento</div></div>
@@ -181,7 +181,7 @@
     <div class="grid g2" style="margin-top:18px">
       <div class="card">
         <h3>Leads por dia — julho</h3>
-        <div class="hint">Contatos únicos por dia</div>
+        <div class="hint">Contatos oficiais (Loja Oficial) por dia</div>
         <div class="chart-box"><canvas id="leadsDaily"></canvas></div>
       </div>
       <div class="card">
@@ -212,13 +212,13 @@
 <script>
 const DIAS = Array.from({length:31},(_,i)=>i+1);
 const D = {
-  impressoes:[0,0,0,0,0,0,52594,46957,136222,211078,212185,208755,242717,264912,280454,299039,325772,330666,322441,463799,87175,522174,507936,0,0,0,0,0,0,0,0],
-  cliques:[0,0,0,0,0,0,105,95,284,488,529,605,604,662,652,856,838,920,917,1171,196,1351,1135,0,0,0,0,0,0,0,0],
-  custo:[0,0,0,0,0,0,1369,1157,1154,1294,1301,1279,1762,1977,1609,1588,1773,1760,1707,3366,518,2973,2858,0,0,0,0,0,0,0,0],
-  geradas:[0,0,0,0,0,0,0,0,2,4,3,2,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0],
-  aceitas:[0,0,0,0,0,0,0,0,1,1,2,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0]
+  impressoes:[0,0,0,0,0,0,52594,46957,136222,211078,212185,208755,242717,264912,280454,299039,325772,330666,322441,463799,87175,522174,507936,726191,941515,1029742,958099,1081778,682021,0,0],
+  cliques:[0,0,0,0,0,0,105,95,284,488,529,605,604,662,652,856,838,920,917,1171,196,1351,1135,1554,2180,2710,2586,2784,1890,0,0],
+  custo:[0,0,0,0,0,0,1369,1157,1154,1294,1301,1279,1762,1977,1609,1588,1773,1760,1707,3366,518,2973,2858,5533,5621,5169,4797,6548,4434,0,0],
+  geradas:[0,0,0,0,0,0,0,0,2,4,3,2,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0],
+  aceitas:[0,0,0,0,0,0,0,0,1,1,2,1,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0]
 };
-const LEADS_DIA=[3,5,8,3,3,10,6,3,10,15,2,7,8,5,8,15,12,13,13,15,32,40,34,3,0,0,0,0,0,0,0];
+const LEADS_DIA=[3,5,8,3,3,10,6,3,10,15,2,7,8,5,8,15,12,13,13,15,32,40,34,16,21,21,30,35,18,0,0];
 const CANAIS={"WhatsApp":417,"Ligações":3,"Pergunta":1};
 const TOP_ADS=[
   ["Consórcio Veículo Bamaq · R$ 30 Mil",75],
